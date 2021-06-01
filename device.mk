@@ -9,7 +9,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-dot
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay/frameworks/base/packages/SystemUI
@@ -41,9 +41,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libkeymaster_messages.vendor:64 \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sm6150
-
-PRODUCT_COPY_FILES += \
-    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # Init scripts
 PRODUCT_PACKAGES += \
